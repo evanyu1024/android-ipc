@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.evan.ipc">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="ipc-main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="ipc-second"
+            android:process=":ipctest" />
+
+        <activity android:name=".aidl.AidlActivity" />
+        <activity android:name=".messenger.MessengerActivity" />
+        <activity android:name=".socket.SocketActivity" />
+
+        <service
+            android:name=".aidl.AidlService"
+            android:label="ipc-aidl"
+            android:process="com.evan.ipc.aidl" />
+        <service
+            android:name=".messenger.MessengerService"
+            android:label="ipc-messenger"
+            android:process="com.evan.ipc.messenger" />
+        <service
+            android:name=".socket.SocketService"
+            android:process="com.evan.ipc.socket" />
+
+    </application>
+
+</manifest>

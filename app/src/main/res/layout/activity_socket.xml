@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.evan.ipc.socket.SocketActivity">
+
+    <EditText
+        android:id="@+id/et_socket_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_socket_send_message_tcp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send message ( TCP )"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_socket_send_message_udp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send message ( UDP ) "
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tv_socket_reply_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+</LinearLayout>
