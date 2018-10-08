@@ -4,34 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.evan.ipc.MainActivity">
+    tools:context=".binderpool.BinderPoolActivity">
 
-    <Button
-        android:id="@+id/btn_aidl"
+    <EditText
+        android:id="@+id/et_num1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="AIDL"
+        android:hint="num1" />
+
+    <EditText
+        android:id="@+id/et_num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="num2" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getSum"
+        android:text="get sum"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/btn_binder_pool"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BinderPool"
+        android:onClick="addBook"
+        android:text="add book"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/btn_messenger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Messenger"
+        android:onClick="getBookList"
+        android:text="get book list"
         android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_socket"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Socket"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textSize="16sp" />
 
 </LinearLayout>
